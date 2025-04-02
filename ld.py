@@ -9,6 +9,6 @@ la=st.number_input('Enter loan amount in thousands')
 if st.button('Predict Approval'):
     prediction=model.predict([[gender,married,income,la]])
     if prediction[0]=='Y':
-        st.text('Loan Approved')
+        st.success('Loan Approved')
     else:
-        st.text('Loan Rejected')
+        st.error('Loan Rejected')
